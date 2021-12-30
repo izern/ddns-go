@@ -41,6 +41,9 @@ func main() {
 		log.Fatal("load ip parser failed. please set ip.parser")
 	}
 
+	logging.InitZapLoggerFromViper(viper.GetViper())
+	log = logging.GetLogger("ddns")
+
 	switch dnsV.(type) {
 	case []map[interface{}]interface{}:
 		dnsConfigs := dnsV.([]map[interface{}]interface{})
@@ -54,7 +57,6 @@ func main() {
 		}
 	default:
 		log.Fatal("dns config error, parse failed")
-
 	}
 
 }

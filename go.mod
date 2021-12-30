@@ -14,7 +14,7 @@ require (
 	github.com/gorilla/websocket v1.4.2 // indirect
 	github.com/grpc-ecosystem/go-grpc-middleware v1.0.0 // indirect
 	github.com/grpc-ecosystem/go-grpc-prometheus v1.2.0 // indirect
-	github.com/izern/logging v0.1.0
+	github.com/izern/logging v0.2.0
 	github.com/jonboulle/clockwork v0.1.0 // indirect
 	github.com/prometheus/client_golang v0.9.3 // indirect
 	github.com/soheilhy/cmux v0.1.4 // indirect
@@ -28,4 +28,4 @@ require (
 	gopkg.in/resty.v1 v1.12.0 // indirect
 )
 
-replace github.com/izern/logging v0.1.0 => github.com/izern/logging-go v0.1.0
+replace github.com/izern/logging v0.2.0 => github.com/izern/logging-go v0.2.0

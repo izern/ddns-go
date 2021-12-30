@@ -1,13 +1,24 @@
+logging:
+  level:
+    root: INFO    # default INFO
+  encoding: json # json or console, default json. only encoding, console is plan text encoding
+  encoder:
+    TimeKey: time
+    LevelKey: level
+    NameKey: logger
+    CallerKey: caller
+    MessageKey: msg
+    StacktraceKey: stacktrace
+  output: # default is console
+    file:
+      path: /var/log/ddns.log
+      async: true # async output,default false
 yun:
   aliyun:
     accesskey: your_key               # 必填
     accessKeySecret: your_key_secret  # 必填
     endpoint: alidns.cn-hangzhou.aliyuncs.com # 选填，默认是杭州地区
 dns:
-  - type: IPV6  # IPV4 | IPV6
-    rr: pan
-    domain: izern.cn
-    yun: aliyun   # select yun.aliyun
   - type: IPV6  # IPV4 | IPV6
     rr: blog
     domain: izern.cn
