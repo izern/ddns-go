@@ -95,6 +95,7 @@ func (sdk *AliyunSDK) UpdateRecord(parse ip.Parser, record *dns.UpdateRecord) er
 			zap.String("domain", record.DomainName),
 			zap.String("RR", record.RR),
 			zap.String("ip", newIp),
+			zap.String("type", record.Type.ToString()),
 		)
 		return nil
 	}
@@ -112,6 +113,7 @@ func (sdk *AliyunSDK) UpdateRecord(parse ip.Parser, record *dns.UpdateRecord) er
 	log.Info("update dns ",
 		zap.String("RR", record.RR),
 		zap.String("domain", record.DomainName),
+		zap.String("ip", newIp),
 		zap.String("type", record.Type.ToString()),
 	)
 
