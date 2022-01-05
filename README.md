@@ -2,15 +2,15 @@
 ## Installation
 
 ```shell
-go get -u github.com/izern/ddns
-cd $GOPATH/src/github/izern/ddns
+go get -u github.com/izern/ddns-go
+cd $GOPATH/src/github/izern/ddns-go
 go build ddns.go
 ```
 
 OR
 
 ```shell
-go install github.com/izern/ddns@main
+go install github.com/izern/ddns-go@main
 ```
 
 ## quick start
