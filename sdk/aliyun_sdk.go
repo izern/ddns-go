@@ -91,7 +91,11 @@ func (sdk *AliyunSDK) UpdateRecord(parse ip.Parser, record *dns.UpdateRecord) er
 		return err
 	}
 	if newIp == oldIp {
-		log.Info("the same ip. skip")
+		log.Info("the same ip. skip",
+			zap.String("domain", record.DomainName),
+			zap.String("RR", record.RR),
+			zap.String("ip", newIp),
+		)
 		return nil
 	}
 	updateDomainRecordRequest := &alidns20150109.UpdateDomainRecordRequest{
